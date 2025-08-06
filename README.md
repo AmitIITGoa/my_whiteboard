@@ -38,7 +38,7 @@ A modern, feature-rich whiteboard application built with React that enables digi
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/whiteboard-app.git
+git clone https://github.com/AmitIITGoa/my_whiteboard.git
 
 # Navigate to project directory
 cd whiteboard-app
