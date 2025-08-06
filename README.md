@@ -204,9 +204,7 @@ We welcome contributions! Please follow these steps:
 - Update documentation for API changes
 - Ensure responsive design compatibility
 
-## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
