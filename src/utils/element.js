@@ -25,6 +25,8 @@ export const createElement = (
     stroke,
     size,
   };
+
+  //  x1  and y1 is the starting point and the x2 and  y2  is  the end point 
   let options = {
     seed: id + 1, // id can't be zero
     fillStyle: "solid",
@@ -52,8 +54,10 @@ export const createElement = (
     case TOOL_ITEMS.LINE:
       element.roughEle = gen.line(x1, y1, x2, y2, options);
       return element;
+
     case TOOL_ITEMS.RECTANGLE:
       element.roughEle = gen.rectangle(x1, y1, x2 - x1, y2 - y1, options);
+
       return element;
     case TOOL_ITEMS.CIRCLE:
       const cx = (x1 + x2) / 2,
@@ -150,3 +154,6 @@ export const getSvgPathFromStroke = (stroke) => {
   d.push("Z");
   return d.join(" ");
 };
+
+
+// this is the  code help  for  drawing the  reactangle we  need to  pass the  starting point and the  height and width  of it 

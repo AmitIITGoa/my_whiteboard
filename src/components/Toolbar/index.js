@@ -13,6 +13,8 @@ import {
   FaFont,
   FaDownload,
 } from "react-icons/fa";
+
+
 import { LuRectangleHorizontal } from "react-icons/lu";
 import { TOOL_ITEMS } from "../../constants";
 import boardContext from "../../store/board-context";
