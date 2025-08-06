@@ -113,20 +113,6 @@ graph LR
     H --> I[Save to History]
 ```
 
-### State Management Pattern
-
-```javascript
-// Example: Drawing a rectangle
-User clicks rectangle tool
-    ↓
-Toolbar → changeToolHandler(TOOL_ITEMS.RECTANGLE)
-    ↓
-BoardProvider → CHANGE_TOOL action
-    ↓
-State updates → activeToolItem = "RECTANGLE"
-    ↓
-Components re-render → Toolbox shows rectangle options
-```
 
 ## 🔧 Key Components
 
@@ -151,16 +137,7 @@ Components re-render → Toolbox shows rectangle options
 
 ## 🎨 Drawing Tools Deep Dive
 
-### Brush Tool
-```javascript
-// Utilizes perfect-freehand for natural stroke simulation
-const stroke = getStroke(points, {
-  size: 16,
-  thinning: 0.5,
-  smoothing: 0.5,
-  streamline: 0.5,
-});
-```
+
 
 ### Shape Tools (Rectangle, Circle, Arrow)
 - Built with RoughJS for hand-drawn aesthetic
@@ -179,29 +156,9 @@ const stroke = getStroke(points, {
 - **Event Handling**: Optimized mouse event processing
 - **Memory Management**: Proper cleanup of event listeners and canvas contexts
 
-## 🎯 State Management
 
-### Board State Structure
-```javascript
-{
-  activeToolItem: "BRUSH",           // Currently selected tool
-  toolActionType: "NONE",            // Current action state
-  elements: [],                      // All drawn elements
-  history: [[]],                     // Undo/redo snapshots
-  index: 0                          // Current history position
-}
-```
 
-### Tool Properties
-```javascript
-{
-  [TOOL_ITEMS.RECTANGLE]: {
-    stroke: "#000000",               // Border color
-    fill: null,                      // Interior color
-    size: 1                          // Border thickness
-  }
-}
-```
+
 
 ## 🔌 API Reference
 
@@ -219,13 +176,7 @@ const stroke = getStroke(points, {
 
 ## 🎪 Advanced Features
 
-### Mathematical Precision
-```javascript
-// Arrow head calculations using trigonometry
-const angle = Math.atan2(y2 - y1, x2 - x1);
-const x3 = x2 - arrowLength * Math.cos(angle - Math.PI / 6);
-const y3 = y2 - arrowLength * Math.sin(angle - Math.PI / 6);
-```
+
 
 ### Smart Erasing
 - Line proximity detection using distance algorithms
@@ -266,9 +217,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Support
 
-- 📧 **Email**: support@whiteboard-app.com
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/whiteboard-app/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/whiteboard-app/discussions)
+- 📧 **Email**: amit.shinde.22042@iitgoa.ac.in
+
 
 ---
 
@@ -276,6 +226,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 **Built with ❤️ using React and modern web technologies**
 
-[⭐ Star this repo](https://github.com/yourusername/whiteboard-app) | [🐛 Report Bug](https://github.com/yourusername/whiteboard-app/issues) | [✨ Request Feature](https://github.com/yourusername/whiteboard-app/issues)
+[⭐ Star this repo](https://github.com/AmitIITGoa/whiteboard-app) | [🐛 Report Bug](https://github.com/AmitIITGoa/whiteboard-app/issues) | [✨ Request Feature](https://github.com/AmitIITGoa/whiteboard-app/issues)
 
 </div>
